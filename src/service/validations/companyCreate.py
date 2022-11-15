@@ -1,4 +1,4 @@
-from src.exceptions.invalidPayloadException  import InvalidPayloadException
+from exceptions.invalidPayloadException  import InvalidPayloadException
 
 REQUIRED_FIELDS = ['name', 'email', 'password', 'password_confirmation']
 

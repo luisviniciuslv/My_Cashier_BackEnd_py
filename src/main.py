@@ -10,7 +10,7 @@ class MyCashier(Flask):
     for i in os.listdir('./src/controllers'):
         if str(i).endswith('.py'):
           i = str(i).replace('.py', '')
-          self.register_blueprint(__import__('src.controllers.' + i, fromlist=[i]).__dict__[i])
+          self.register_blueprint(__import__('controllers.' + i, fromlist=[i]).__dict__[i])
           print("loaded ", i)
 
 client = MyCashier()

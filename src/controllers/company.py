@@ -1,8 +1,8 @@
 import json
 from flask import Blueprint, jsonify, request
-from src.exceptions.companyAlreadyExists import CompanyAlreadyExists
-from src.exceptions.invalidPayloadException import InvalidPayloadException
-from src.service.companyService import CompanyService
+from exceptions.companyAlreadyExists import CompanyAlreadyExists
+from exceptions.invalidPayloadException import InvalidPayloadException
+from service.companyService import CompanyService
 company = Blueprint('company', __name__, url_prefix='/company')
 @company.route('/',methods=['GET'])
 def index():
